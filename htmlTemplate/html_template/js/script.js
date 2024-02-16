@@ -9,12 +9,22 @@ function askName (){
 
 function askbirthYear (){
     let birthYear = prompt ("Quand es tu né")
-    et today = new Date();
+    let monthYear = prompt ("quel est le numéro de ton mois")
+    let today = new Date();
+    let month = today.getMonth()+1
     let year = today.getFullYear()
     let age = year - birthYear
-    console.log(age)
+    let mois = monthYear - month
+    if (monthYear>month){
+        age --
+    }
     
-    document.body.innerHTML += "<h3>vous avez\ " + age + " \ans</h3>"
+    
+    console.log(age)
+    console.log(month)
+
+    
+    document.body.innerHTML += "<h3>vous avez\ " +  age + " \ans</h3>" 
     
 }
 
